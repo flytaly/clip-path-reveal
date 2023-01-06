@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css" />
+        <script defer src="demo2.js" type="module" />
+    </head>
+    <body>
+        <style>
+            .svg-clipped {
+                clip-path: url(#svgPath);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                max-width: 90vw;
+                max-height: 90vh;
+                border: 1px solid white;
+            }
+        </style>
+        <svg style="position: absolute">
+            <defs>
+                <clipPath id="svgPath" clipPathUnits="objectBoundingBox">
+                    <rect x="1.1" y="-0.2" width="0.11" height="1.41" transform="rotate(45 0.5 0.5)" />
+                    <rect x="1" y="-0.2" width="0.1" height="1.41" transform="rotate(45 0.5 0.5)" />
+                    <rect x="0.9" y="-0.2" width="0.1" height="1.41" transform="rotate(45 0.5 0.5)" />
+                    <rect x="0.8" y="-0.2" width="0.1" height="1.41" transform="rotate(45 0.5 0.5)" />
+                    <rect x="0.7" y="-0.2" width="0.1" height="1.41" transform="rotate(45 0.5 0.5)" />
+                    <rect x="0.6" y="-0.2" width="0.1" height="1.41" transform="rotate(45 0.5 0.5)" />
+                    <rect x="0.5" y="-0.2" width="0.1" height="1.41" transform="rotate(45 0.5 0.5)" />
+                    <rect x="0.4" y="-0.2" width="0.1" height="1.41" transform="rotate(45 0.5 0.5)" />
+                    <rect x="0.3" y="-0.2" width="0.1" height="1.41" transform="rotate(45 0.5 0.5)" />
+                    <rect x="0.2" y="-0.2" width="0.1" height="1.41" transform="rotate(45 0.5 0.5)" />
+                    <rect x="0.1" y="-0.2" width="0.1" height="1.41" transform="rotate(45 0.5 0.5)" />
+                    <rect x="0" y="-0.2" width="0.1" height="1.41" transform="rotate(45 0.5 0.5)" />
+                    <rect x="-0.1" y="-0.2" width="0.1" height="1.41" transform="rotate(45 0.5 0.5)" />
+                    <rect x="-0.21" y="-0.2" width="0.11" height="1.41" transform="rotate(45 0.5 0.5)" />
+                </clipPath>
+            </defs>
+        </svg>
+
+        <div class="container">
+            <header>
+                <a href="./demo1.html">Circles</a>
+                <a href="./demo2.html">Shutters</a>
+            </header>
+            <div class="svg-clipped">
+                <img src="./img/alex-jiang-8f-RFHuz4nk-unsplash.jpg" />
+            </div>
+        </div>
+    </body>
+</html>
