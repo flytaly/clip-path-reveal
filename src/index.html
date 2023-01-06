@@ -5,12 +5,67 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
-        <script deffer src="./app.js" ></script>
-        <link rel="stylesheet" href="style.css"></link>
+        <link rel="stylesheet" href="style.css" />
     </head>
     <body>
+        <!--
+        Based on https://www.sarasoueidan.com/demos/css-svg-clipping/html-img-clipped-with-css-svg-clippath-animated/
+
+        With "objectBoundingBox" the clipped element must have the correct aspect ratio, 
+        otherwise the circles will become ellipses
+        -->
+        <style>
+            .svg-clipped {
+                clip-path: url(#svgPath);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                aspect-ratio: 1/1;
+                min-height: 300px;
+                min-width: 300px;
+                max-width: 90vw;
+                max-height: 90vh;
+                border: 1px dashed #777;
+            }
+        </style>
+        <svg style="position: absolute">
+            <defs>
+                <clipPath id="svgPath" clipPathUnits="objectBoundingBox">
+                    <circle stroke="#000000" cx="0.2" cy="0.2" r="0.7">
+                        <animate
+                            attributeName="r"
+                            attributeType="XML"
+                            from="0"
+                            to="0.9"
+                            begin="0s"
+                            dur="1.5s"
+                            fill="freeze"
+                            repeatCount="1"
+                        />
+                    </circle>
+                    <circle stroke="#000000" cx="0.8" cy="0.8" r="0.7">
+                        <animate
+                            attributeName="r"
+                            attributeType="XML"
+                            from="0"
+                            to="0.9"
+                            begin="0s"
+                            dur="1.5s"
+                            fill="freeze"
+                            repeatCount="1"
+                        />
+                    </circle>
+                </clipPath>
+            </defs>
+        </svg>
+
         <div class="container">
-            <img src="./img/alex-jiang-8f-RFHuz4nk-unsplash.jpg" />
+            <header>
+                <a href="./index.html">Demo 1</a>
+            </header>
+            <div class="svg-clipped">
+                <img src="./img/alex-jiang-8f-RFHuz4nk-unsplash.jpg" />
+            </div>
         </div>
     </body>
 </html>
